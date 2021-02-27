@@ -4,7 +4,7 @@ Tests for Paver's Stylelint tasks.
 
 import pytest
 import ddt
-from mock import MagicMock, patch
+from unittest.mock import MagicMock, patch
 from paver.easy import call_task
 
 from .utils import PaverTestCase

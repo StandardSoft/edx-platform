@@ -11,7 +11,7 @@ import unittest
 import pytest
 
 from ddt import data, ddt, file_data, unpack
-from mock import MagicMock, mock_open, patch
+from unittest.mock import MagicMock, mock_open, patch
 from path import Path as path
 from paver.easy import BuildFailure
 

@@ -8,7 +8,7 @@ import textwrap
 import unittest
 import pytest
 
-from mock import mock_open, patch
+from unittest.mock import mock_open, patch
 from paver.easy import call_task, task
 
 import pavelib.i18n
@@ -182,5 +182,5 @@ class TestI18nCompileJS(PaverTestCase):
         self.reset_task_messages()
         os.environ['NO_PREREQ_INSTALL'] = "true"
         call_task('pavelib.i18n.i18n_compilejs', options={"settings": Env.TEST_SETTINGS})
-        assert self.task_messages == ['python manage.py lms --settings={} compilejsi18n'.format(Env.TEST_SETTINGS),
-                                      'python manage.py cms --settings={} compilejsi18n'.format(Env.TEST_SETTINGS)]
+        assert self.task_messages == [f'python manage.py lms --settings={Env.TEST_SETTINGS} compilejsi18n',
+                                      f'python manage.py cms --settings={Env.TEST_SETTINGS} compilejsi18n']

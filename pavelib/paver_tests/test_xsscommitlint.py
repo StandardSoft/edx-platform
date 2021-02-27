@@ -3,7 +3,7 @@ Tests for paver xsscommitlint quality tasks
 """
 
 import pytest
-from mock import patch
+from unittest.mock import patch
 from paver.easy import call_task
 
 import pavelib.quality
