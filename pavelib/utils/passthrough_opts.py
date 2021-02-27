@@ -12,7 +12,7 @@ Provides:
 from optparse import BadOptionError, OptionParser
 
 import paver.tasks
-from mock import patch
+from unittest.mock import patch
 
 
 class PassthroughOptionParser(OptionParser):
